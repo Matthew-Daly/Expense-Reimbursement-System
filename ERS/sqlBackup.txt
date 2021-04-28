@@ -1,0 +1,231 @@
+--SQL for project-1
+
+
+--create table ers_reimbursement
+CREATE TABLE ers_reimbursement (
+	reimb_id SERIAL,
+	reimb_amount NUMERIC(9,2) NOT NULL,
+	reimb_submitted timestamp NOT NULL,
+	reimb_resolved timestamp DEFAULT NULL,
+	reimb_description varchar(250) DEFAULT NULL,
+	reimb_receipt bytea DEFAULT NULL,
+	reimb_author int NOT null,
+	reimb_resolver int DEFAULT 4,
+	reimb_status_id int DEFAULT 1,
+	reimb_type_id int NOT NULL,
+	PRIMARY KEY(reimb_id),
+	FOREIGN KEY(reimb_author) REFERENCES ers_users(ers_users_id),
+	FOREIGN KEY(reimb_resolver) REFERENCES ers_users(ers_users_id),
+	FOREIGN KEY(reimb_status_id) REFERENCES ers_reimbursement_status(reimb_status_id),
+	FOREIGN key(reimb_type_id) REFERENCES ers_reimbursement_type(reimb_type_id)	
+
+); 
+
+
+
+--create users table
+CREATE TABLE ers_users(
+	ers_users_id SERIAL,
+	ers_user_name varchar(50) UNIQUE NOT NULL,
+	ers_password varchar(50) NOT NULL,
+	user_first_name varchar(100) NOT NULL,
+	user_last_name varchar(100) NOT NULL,
+	user_email varchar(150) UNIQUE NOT NULL,
+	user_role_id int,
+	PRIMARY KEY(ers_users_id),
+	FOREIGN KEY(user_role_id) REFERENCES ers_user_roles(ers_user_role_id)  
+);
+
+
+
+--create look up table for ers_reimbursement_status
+CREATE TABLE ers_reimbursement_status(
+	reimb_status_id int,
+	reimb_status varchar(20) NOT NULL,
+	PRIMARY KEY (reimb_status_id)
+);
+
+--create look up table for ers_reimbursement_type
+CREATE TABLE ers_reimbursement_type(
+	reimb_type_id int,
+	reimb_type varchar(20) NOT NULL,
+	PRIMARY KEY (reimb_type_id)
+);
+
+CREATE TABLE ers_user_roles (
+	ers_user_role_id int,
+	user_role varchar(20) NOT NULL,
+	PRIMARY KEY (ers_user_role_id)
+);
+
+
+
+
+--Crud for users
+SELECT user_first_name, user_last_name FROM ers_users eu WHERE ers_users_id = 1;
+
+
+--Crud for ers_reimbursement
+SELECT * FROM ers_reimbursement er WHERE er.reimb_author = 1;
+
+
+--Crud for resolver to see all reimbursements request
+SELECT * FROM ers_reimbursement er WHERE reimb_resolver = 4;
+
+
+SELECT * FROM ers_reimbursement er INNER JOIN ers_users eu 
+ON er.reimb_resolver = eu.ers_users_id ORDER BY reimb_status_id; 
+
+
+
+SELECT * FROM ers_users eu INNER JOIN ers_reimbursement er 
+ON er.reimb_resolver = eu.ers_users_id;
+INNER JOIN ers_reimbursement er ON er.reimb_author 
+
+
+SELECT * FROM ers_reimbursement er LEFT OUT JOIN ers_users eu ON ers_users_id = eu.ers_users_id
+WHERE 
+
+
+--	reimb_id SERIAL,
+--	reimb_amount NUMERIC(9,2) NOT NULL,
+--	reimb_submitted timestamp NOT NULL,
+--	reimb_resolved timestamp DEFAULT NULL,
+--	reimb_description varchar(250) DEFAULT NULL,
+--	reimb_receipt bytea DEFAULT NULL,
+--	reimb_author int NOT null,
+--	reimb_resolver int DEFAULT 4,
+--	reimb_status_id int DEFAULT 1,
+--	reimb_type_id int NOT NULL,
+
+
+
+--insert into ers_reimbursement
+INSERT INTO ers_reimbursement(reimb_amount, reimb_submitted,reimb_description, reimb_author, reimb_type_id) 
+VALUES (8.55, current_timestamp, 'Pens', 5, 3);
+
+
+INSERT INTO ers_reimbursement(reimb_amount, reimb_submitted,reimb_description, reimb_author, reimb_type_id) 
+VALUES (1150.25, current_timestamp, 'Dundies trophies', 1, 6);
+
+
+INSERT INTO ers_reimbursement(reimb_amount, reimb_submitted,reimb_description, reimb_author, reimb_type_id) 
+VALUES (5.95, current_timestamp, 'Jello', 5, 7);
+
+INSERT INTO ers_reimbursement(reimb_amount, reimb_submitted,reimb_description, reimb_author, reimb_type_id) 
+VALUES (55.02, current_timestamp, 'bear repellent', 7, 5);
+
+INSERT INTO ers_reimbursement(reimb_amount, reimb_submitted,reimb_description, reimb_author, reimb_type_id) 
+VALUES (15.15, current_timestamp, 'Magic Cane', 1, 2);
+
+
+
+
+--insert into ers_users
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('DateMike', 'ThatsWhatSheSaid', 'Michael', 'Scott', 'micheal@dunderMifflin.com', 3);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('BossMan', 'SuckIt', 'David', 'Wallace', 'david@dunderMifflin.com', 1);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('IceQueen', 'Astrid', 'Jan', 'Levinson', 'jan@dunderMifflin.com', 2);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('Monkey', 'Sprinkles', 'Angela', 'Martin', 'angela@dunderMifflin.com', 4);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('Tuna', 'Pam', 'Jim', 'Halpert', 'jim@dunderMifflin.com', 6);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('MixedBerry', 'Cecelia', 'Pam', 'Beesly', 'paml@dunderMifflin.com', 10);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('Recyclops', 'Beets', 'Dwight', 'Schrute', 'dwight@dunderMifflin.com', 6);
+
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('Scrantonicity', 'Jada', 'Darryl', 'Philbin', 'darryl@dunderMifflin.com', 9);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('SubtleSexuality', 'Ryan', 'Kelly', 'Kapoor', 'kelly@dunderMifflin.com', 8);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('CostaRica', 'HelenMirren', 'Toby', 'Flenderson', 'toby@dunderMifflin.com', 7);
+
+INSERT INTO ers_users (ers_user_name, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+VALUES ('Scrantonicity', 'Cookies', 'Kevin', 'Malone', 'kevin@dunderMifflin.com', 5);
+
+
+
+
+--insert reimbursement status ino satus look up table
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (1, 'Travel');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (2, 'Education/Training');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (3, 'Supplies');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (4, 'Food');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (5, 'Medical');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (6, 'Party Supplies');
+INSERT INTO	 ers_reimbursement_type (reimb_type_id, reimb_type) VALUES (7, 'Miscellaneous');
+
+--insert reimbursement_type into ers_reimbursment type look up table
+INSERT INTO	 ers_reimbursement_status (reimb_status_id, reimb_status) VALUES (1, 'Pending');
+INSERT INTO	 ers_reimbursement_status (reimb_status_id, reimb_status) VALUES (2, 'Approved');
+INSERT INTO	 ers_reimbursement_status (reimb_status_id, reimb_status) VALUES (3, 'Denied');
+INSERT INTO	 ers_reimbursement_status (reimb_status_id, reimb_status) VALUES (4, 'Go Away Michael');
+
+
+--insert user roles into ers_user_roles table
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (1, 'CEO');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (2, 'Vice President');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (3, 'Regional Manager');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (4, 'Senior Accountant');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (5, 'Accountant');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (6, 'Sales');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (7, 'HR');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (8, 'Customer Service');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (9, 'Warehouse');
+INSERT INTO ers_user_roles (ers_user_role_id, user_role) VALUES (10, 'Reception');
+
+
+--Drop tables to reset
+DROP TABLE ers_reimbursement;
+DROP TABLE ers_reimbursement_status;
+DROP TABLE ers_reimbursement_type;
+DROP TABLE ers_users;
+DROP TABLE ers_user_roles;
+
+
+
+--Truncate tables to reset
+TRUNCATE TABLE ers_reimbursement;
+TRUNCATE TABLE ers_reimbursement_status;
+TRUNCATE TABLE ers_reimbursement_type;
+TRUNCATE TABLE ers_users;
+TRUNCATE TABLE ers_user_roles ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

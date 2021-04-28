@@ -1,0 +1,93 @@
+img.logo{width: 150px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+
+body{
+        
+    background: url("officeResourcesImages/image.jpeg") no-repeat center center fixed; 
+    /* background: url("officeResourcesImages/jim-halperts-desk.jpg") no-repeat center center fixed; */
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+
+#userLoginText{
+    /* color: rgb(21, 53, 78); */
+    color: black;
+    text-align: center;
+
+}
+
+#loginSubmit{
+    background-color: rgb(21, 53, 78);
+    border: none;
+}
+
+#loginBox{
+    padding-top: 200px;
+}
+
+.inputText{
+    color: black;
+}
+
+#companyName{
+    color: rgb(21, 53, 78); 
+    font-weight: 1000;
+    padding-right: 150px;
+    text-align:center;
+    font-family: Helvetica, sans-serif;
+
+}
+
+#header{
+    background-color: beige;
+}
+
+#custBtn1{
+    background-color: rgb(21, 53, 78);
+
+}
+
+#custBtn2{
+    background-color: rgb(122, 148, 96);
+}
+
+#custBtn3{
+    background-color: rgb(221, 119, 136);
+}
+
+
+#approve{
+    background-color: rgb(122, 148, 96);
+}
+
+#deny{
+    background-color: rgb(221, 119, 136);
+}
+
+.colName{
+    color: beige;
+}
+
+
+#tableData{
+    /* color: #87A19F; */
+    color: rgb(21, 53, 78); 
+}
+
+#reimbursements-table{
+    display: none;
+}

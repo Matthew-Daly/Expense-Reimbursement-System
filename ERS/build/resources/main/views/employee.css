@@ -1,0 +1,128 @@
+img.logo{width: 150px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    color: white;
+}
+
+
+body{
+    
+    
+    background: url("officeResourcesImages/confrence.png") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/* 
+.navbar{
+    background-color: rgb(21, 53, 78);
+} */
+
+
+#userLoginText{
+    /* color: rgb(21, 53, 78); */
+    color: black;
+    text-align: center;
+    
+}
+
+#loginSubmit{
+    background-color: rgb(21, 53, 78);
+    border: none;
+}
+
+#loginBox{
+    padding-top: 200px;
+}
+
+.inputText{
+    color: black;
+}
+
+#companyName{
+    color: rgb(21, 53, 78);
+    font-weight: 1000;
+    padding-right: 150px;
+    text-align:center;
+    font-family: Helvetica, sans-serif;
+
+}
+
+#header{
+    background-color: beige;
+}
+
+#hello{
+    color: white;
+    
+    
+}
+
+#custBtn1{
+    background-color: rgb(21, 53, 78);
+    border: none;
+}
+
+#custBtn2{
+    background-color: rgb(122, 148, 96);
+}
+
+#custBtn3{
+    background-color: rgb(221, 119, 136);
+}
+
+#Q{
+    color: #f0f8ff;
+}
+
+.colName{
+    color: beige;
+}
+
+#tableData{
+    color: #B5B7BB; 
+}
+
+
+
+
+#reimbursements-table{
+    display: none;
+}
+
+#
+
+#submit-btn{
+    background-color: rgb(21, 53, 78);
+    border: none;
+}
+
+
+#new-reimb-form{
+    display: none;
+}
+
+#amountTxt, #descTxt, #typeTxt{
+    color: beige;
+}
+
+.selectWrapper{
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    background:beige;
+    border:1px solid #cccccc;
+  }
+  .selectBox{
+    width:140px;
+    height:30px;
+    border:0px;
+    outline:none;
+  }

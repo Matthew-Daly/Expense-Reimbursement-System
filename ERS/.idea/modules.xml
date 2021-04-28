@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../05-server-side/HelloFrontController/HelloFrontController.iml" filepath="$PROJECT_DIR$/../../05-server-side/HelloFrontController/HelloFrontController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../05-server-side/HelloJavalin/HelloJavalin.iml" filepath="$PROJECT_DIR$/../../05-server-side/HelloJavalin/HelloJavalin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JavalinFullStackMine/src/main/main.iml" filepath="$PROJECT_DIR$/../JavalinFullStackMine/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../JavalinFullStackMine/src/test/test.iml" filepath="$PROJECT_DIR$/../JavalinFullStackMine/src/test/test.iml" />
+    </modules>
+  </component>
+</project>

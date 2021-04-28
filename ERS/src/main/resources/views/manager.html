@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- <link rel="stylesheet" type="text/css" href="../css/bootstrapbg.css"> -->
+	<!-- <link rel="stylesheet" href="./company.css"> -->
+	<link rel="stylesheet" href="./manager.css">
+
+	<title>Project One</title>
+</head>
+<body>
+
+<div class="container-fluid bg">
+
+	<nav class="navbar navbar-default" id="header">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<img class = "img-responsive logo" src = "https://upload.wikimedia.org/wikipedia/commons/archive/8/80/20100228005046%21The_Office_US_logo.svg">
+
+			</div>
+			<h1 id="companyName">Dunder Mifflin</h1>
+		</div>
+	</nav>
+
+
+	<h1 id="hello">Hello</h1>
+	<h2>What would you like to do today?</h2>
+<!--	onclick="show()"-->
+	<button onclick="show()" type="button" class="btn btn-primary btn-lg" id="custBtn1" >See All Reimbursements</button>
+	<button onclick="show()" type="button" class="btn btn-secondary btn-lg" id="custBtn2">Approve/Deny</button>
+	<button type="button" class="btn btn-secondary btn-lg" id="custBtn3">Logout</button>
+
+	<div class = "container" id="reimbursements-table">
+
+		<table class="table table-light table-hover">
+			<thead>
+			<tr class="table-dark">
+				<td>
+					<th class="colName" scope="col">ID</th>
+					<th class="colName" scope="col">Amount</th>
+					<th class="colName" scope="col">Submitted</th>
+					<th class="colName" scope="col">Resolved</th>
+					<th class="colName" scope="col">Description</th>
+					<th class="colName" scope="col">Author</th>
+					<th class="colName" scope="col">Status</th>
+					<th class="colName" scope="col">Type</th>
+				</td>
+			</tr>
+			</thead>
+			<tbody id="allReimbs"></tbody>
+		</table>
+	</div>
+
+<!--	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>-->
+	<script src="../javascript/manager.js" type="text/javascript"></script>
+</body>
+</html>
+
+
+	
+
+
+
+
