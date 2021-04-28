@@ -33,3 +33,8 @@ Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, 
 * Open the project, go to Driver folder inside main folder. Open the MainDriver class and run that class.
 ![Selection_006](https://user-images.githubusercontent.com/16307728/116434036-e7f42100-a7fe-11eb-9240-97273d8d00ba.png)
 
+* After running, the project will run on (http://localhost:9002/)
+* Login (if you like login as Jim Halpert - username: Tuna, password: Pam)
+![Selection_002](https://user-images.githubusercontent.com/16307728/116434673-79639300-a7ff-11eb-983d-8d880110e8d1.png)
+
+
