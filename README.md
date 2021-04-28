@@ -37,4 +37,6 @@ Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, 
 * Login (if you like login as Jim Halpert - username: Tuna, password: Pam)
 ![Selection_002](https://user-images.githubusercontent.com/16307728/116434673-79639300-a7ff-11eb-983d-8d880110e8d1.png)
 
+* Employees are directed to this page to see and submit reimbursement requests.
+![Selection_003](https://user-images.githubusercontent.com/16307728/116435038-ce9fa480-a7ff-11eb-8807-ca8d6b55e51c.png)
 
