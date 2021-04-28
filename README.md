@@ -40,3 +40,8 @@ Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, 
 * Employees are directed to this page to see and submit reimbursement requests.
 ![Selection_003](https://user-images.githubusercontent.com/16307728/116435038-ce9fa480-a7ff-11eb-8807-ca8d6b55e51c.png)
 
+* Mangers are directed to a page where they can see all reimbursement requests and approve or deny them. (if you would like to log in as 
+  a manager, use Michael's credentials - username: DateMike, password: ThatsWhatSheSaid)
+  ![Selection_005](https://user-images.githubusercontent.com/16307728/116435594-61404380-a800-11eb-9e5f-d63a1f18f1b7.png)
+
+
