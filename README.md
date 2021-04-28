@@ -1,4 +1,3 @@
-![Selection_004](https://user-images.githubusercontent.com/16307728/116435666-76b56d80-a800-11eb-8939-077c7aedb683.png)
 # Expense-Reimbursement-System (ERS) - Java CDE Full Stack
 The Expense Reimbursement System (ERS) will manage the process of reimbursing employees for expenses incurred while on company time. 
 
@@ -44,9 +43,9 @@ Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, 
 * Mangers are directed to a page where they can see all reimbursement requests and approve or deny them. (if you would like to log in as 
   a manager, use Michael's credentials - username: DateMike, password: ThatsWhatSheSaid)
   
-  ![Selection_005](https://user-images.githubusercontent.com/16307728/116435707-81700280-a800-11eb-8dec-b8c1f66addc3.png)
+![Selection_005](https://user-images.githubusercontent.com/16307728/116435707-81700280-a800-11eb-8dec-b8c1f66addc3.png)
 
   
-  ![Selection_005](https://user-images.githubusercontent.com/16307728/116435594-61404380-a800-11eb-9e5f-d63a1f18f1b7.png)
+![Selection_005](https://user-images.githubusercontent.com/16307728/116435594-61404380-a800-11eb-9e5f-d63a1f18f1b7.png)
 
 
