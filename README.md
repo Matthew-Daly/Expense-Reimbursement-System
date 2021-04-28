@@ -28,3 +28,7 @@ To-do list:
 # Environment / Technologies
 Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, Git, Maven
 
+# Usage
+
+* Open the project, go to Driver folder inside main folder. Open the MainDriver class and run that class.
+/home/matthew/Pictures/Selection_006.png
