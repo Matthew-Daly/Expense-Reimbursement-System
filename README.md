@@ -23,3 +23,8 @@ To-do list:
 * Forget-password will able to send email confirmation and reset password from user.
 * As employee, user can upload the reimbursement reciept when create ticket.
 * As manager, user can download and view the reciept.
+
+
+# Environment / Technologies
+Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, Git, Maven
+
