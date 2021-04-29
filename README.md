@@ -47,7 +47,7 @@ Servlets, Java, JavaScript, HTML, CSS, JDBC, SQL, AJAX, Bootstrap, RDS, Tomcat, 
 
 ![Selection_004](https://user-images.githubusercontent.com/16307728/116435902-b5e3be80-a800-11eb-9dd6-2a88be2fd5a1.png)
 
-* Hit the log out button at anytime to return to the login page.
+* Hit the logout button at anytime to return to the login page.
 
 Thank you for looking at my project.  
 
